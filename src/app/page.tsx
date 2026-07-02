@@ -366,9 +366,9 @@ export default async function Home() {
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded bg-gradient-to-br from-accent-green to-accent-blue flex items-center justify-center">
-              <span className="text-bg-primary font-bold text-xs">R</span>
+              <span className="text-bg-primary font-bold text-xs">P</span>
             </div>
-            <span className="text-text-muted text-sm">Rush Protocol</span>
+            <span className="text-text-muted text-sm">PredX Protocol</span>
           </div>
           <p className="text-text-muted text-xs">
             Powered by Polymarket. Not financial advice.

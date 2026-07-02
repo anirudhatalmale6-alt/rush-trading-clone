@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import WalletButton from "./WalletButton";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -12,10 +13,10 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-green to-accent-blue flex items-center justify-center">
-              <span className="text-bg-primary font-bold text-sm">R</span>
+              <span className="text-bg-primary font-bold text-sm">P</span>
             </div>
             <span className="text-text-primary font-bold text-xl tracking-tight">
-              Rush
+              PredX
             </span>
           </Link>
 
@@ -26,27 +27,22 @@ export default function Header() {
             >
               Markets
             </Link>
-            <a
-              href="#how-it-works"
+            <Link
+              href="/portfolio"
               className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
             >
-              How it works
-            </a>
-            <a
-              href="#features"
+              Portfolio
+            </Link>
+            <Link
+              href="/leaderboard"
               className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
             >
-              Features
-            </a>
+              Leaderboard
+            </Link>
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
-            <Link
-              href="/markets"
-              className="px-5 py-2 bg-gradient-to-r from-accent-green to-accent-blue text-bg-primary font-semibold text-sm rounded-lg hover:opacity-90 transition-opacity"
-            >
-              Launch App
-            </Link>
+            <WalletButton />
           </div>
 
           <button
@@ -89,20 +85,23 @@ export default function Header() {
             >
               Markets
             </Link>
-            <a
-              href="#how-it-works"
+            <Link
+              href="/portfolio"
               className="block text-text-secondary hover:text-text-primary text-sm font-medium"
               onClick={() => setMobileOpen(false)}
             >
-              How it works
-            </a>
+              Portfolio
+            </Link>
             <Link
-              href="/markets"
-              className="block w-full text-center px-5 py-2 bg-gradient-to-r from-accent-green to-accent-blue text-bg-primary font-semibold text-sm rounded-lg"
+              href="/leaderboard"
+              className="block text-text-secondary hover:text-text-primary text-sm font-medium"
               onClick={() => setMobileOpen(false)}
             >
-              Launch App
+              Leaderboard
             </Link>
+            <div className="pt-2">
+              <WalletButton />
+            </div>
           </div>
         </div>
       )}

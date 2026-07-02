@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import TradingPanel from "@/components/TradingPanel";
+import PriceChart from "@/components/PriceChart";
 import { fetchMarketBySlug, formatVolume, formatPercent } from "@/lib/polymarket";
 import { parseMarket } from "@/lib/types";
 import Image from "next/image";
@@ -118,6 +119,9 @@ export default async function MarketPage({
                   </div>
                 </div>
               </div>
+
+              {/* Price Chart */}
+              <PriceChart conditionId={market.conditionId} />
 
               {/* Stats */}
               <div className="glass-card p-5">
